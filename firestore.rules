@@ -1,0 +1,22 @@
+rules_version = '2';
+
+// Reglas para una app personal SIN pantalla de login.
+//
+// La app inicia sesión de forma anónima e invisible al arrancar, y todos los
+// datos viven bajo `workspace/main` (no bajo /users/{uid}). Así cualquiera de
+// TUS dispositivos ve los mismos datos aunque cada uno tenga un UID anónimo
+// distinto, mientras que un visitante sin sesión no puede tocar nada.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Todo el espacio de trabajo compartido: pagos, notas y eventos.
+    match /workspace/main/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Nada fuera del workspace es accesible.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

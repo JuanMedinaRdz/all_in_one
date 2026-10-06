@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Notas — nota</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0e1116}
+a{color:#2ecc8f}a:hover{color:#5fe0ad}
+input::placeholder{color:#7d8795}
+@keyframes steam{0%{transform:translateY(4px);opacity:0}40%{opacity:.75}100%{transform:translateY(-7px);opacity:0}}
+.steam{animation:steam 2.8s ease-in-out infinite}.s2{animation-delay:.9s}.s3{animation-delay:1.8s}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.blink{animation:blink 4.6s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.bob{animation:bob 3.2s ease-in-out infinite}
+@keyframes peek{0%,100%{transform:translateY(6px)}50%{transform:translateY(0)}}
+.peek{animation:peek 3.6s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(.55);opacity:.25}50%{transform:scale(1);opacity:1}}
+.twinkle{animation:twinkle 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.t2{animation-delay:.7s}.t3{animation-delay:1.4s}
+@keyframes drift{0%,100%{transform:translateX(0)}50%{transform:translateX(10px)}}
+.drift{animation:drift 12s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.wave span{display:inline-block;width:3px;border-radius:2px;background:#a78bfa;transform-origin:center;animation:wave 1.1s ease-in-out infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.7);opacity:0}}
+.pulse{animation:pulse 2.4s ease-out infinite}
+@keyframes caret{0%,49%{opacity:1}50%,100%{opacity:0}}
+.caret{animation:caret 1s steps(1) infinite}
+.lift{transition:transform .2s ease,box-shadow .2s ease}.lift:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.35)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; background: #0e1116; font-family: 'Nunito', system-ui, sans-serif; color: #e8edf2; overflow: hidden"><div style="height: 36px; display: flex; align-items: center; justify-content: space-between; padding: 0 22px; font-size: 13px; font-weight: 800; color: #e8edf2"><span>5:19</span><span style="display: flex; gap: 6px; align-items: center"><span style="width: 16px; height: 9px; border-radius: 2px; border: 1.5px solid #e8edf2"></span></span></div><div style="display: flex; align-items: center; gap: 6px; padding: 4px 12px 0">
+<a href="MNotasEspacio.dc.html" aria-label="Volver" style="width: 44px; height: 44px; border-radius: 12px; color: #e8edf2; display: flex; align-items: center; justify-content: center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+<div style="flex-grow: 1; display: flex; align-items: center; gap: 6px; font-size: 12px; color: #8b95a3; font-weight: 700; min-width: 0"><span style="color: #2ecc8f"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"></rect><path d="M2 19h20"></path></svg></span><span style="white-space: nowrap">Migración Proyecto</span><span>/</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Backend</span></div>
+<button type="button" aria-label="Favorita" style="width: 44px; height: 44px; border: none; background: none; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="#f5c542" stroke="#f5c542" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg></button>
+<button type="button" aria-label="Más" style="width: 44px; height: 44px; border: none; background: none; color: #e8edf2; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle></svg></button>
+</div>
+<div style="padding: 4px 20px 0; display: flex; flex-direction: column; gap: 14px">
+<h1 style="margin: 0; font-size: 26px; font-weight: 900; line-height: 1.15">Arquitectura del backend</h1>
+<div style="display: grid; grid-template-columns: 96px 1fr; row-gap: 9px; font-size: 13px; align-items: center">
+<span style="color: #8b95a3; display: flex; gap: 6px; align-items: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="8.5" r="1.3"></circle></svg>Etiquetas</span><span style="display: flex; gap: 6px"><span style="font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 7px; background: #123324; color: #74e3ad; white-space: nowrap">#backend</span><span style="font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 7px; background: #1b2a45; color: #9cc0ff; white-space: nowrap">#estructura</span><span style="font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 7px; background: #241d3a; color: #c1abff; white-space: nowrap">#api</span></span>
+<span style="color: #8b95a3; display: flex; gap: 6px; align-items: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><path d="M8 12l3 3 5-6"></path></svg>Estado</span><span><span style="font-size: 12px; font-weight: 800; color: #f3be74; background: #3a2a12; padding: 3px 9px; border-radius: 7px">En progreso</span></span>
+<span style="color: #8b95a3; display: flex; gap: 6px; align-items: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg>Vinculada</span><a href="#" style="font-weight: 700; text-decoration: none; display: flex; gap: 6px; align-items: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7l2 2 3-4M4 16l2 2 3-4M13 7h7M13 16h7"></path></svg>Migrar módulos · 2/5</a>
+</div>
+<div style="height: 1px; background: #222933"></div>
+<h2 style="margin: 0; font-size: 17px; font-weight: 800">Estructura del proyecto</h2>
+<div style="position: relative; background: #12161d; border: 1px solid #222933; border-radius: 14px; padding: 12px 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.7; color: #c3cad3">
+<button type="button" aria-label="Copiar código" style="position: absolute; top: 6px; right: 6px; width: 32px; height: 32px; border-radius: 9px; border: none; background: #1f2630; color: #8b95a3; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"></path></svg></button>
+<div>backend/</div><div>├─ Domain/ <span style="color: #6b7482"># negocio</span></div><div>├─ Infrastructure/ <span style="color: #6b7482"># db, repos</span></div><div>└─ Api/ <span style="color: #6b7482"># endpoints</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 800"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b95a3" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>Módulos <span style="color: #8b95a3; font-weight: 700">10</span></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; padding-left: 22px; font-size: 13px; color: #c3cad3"><span>Identity</span><span>Claims</span><span>Authorization</span><span>Documents</span><span>Configuration</span><span style="color: #8b95a3">+ 5 más</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h2 style="margin: 0 0 4px; font-size: 15px; font-weight: 800">Pendientes</h2>
+<div style="display: flex; align-items: center; gap: 10px; min-height: 36px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #2ecc8f; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0e1116" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"></path></svg></span><span style="flex-grow: 1; font-size: 14px; color: #8b95a3; text-decoration: line-through">Separar capa Api</span></div>
+<div style="display: flex; align-items: center; gap: 10px; min-height: 36px"><span style="width: 20px; height: 20px; border-radius: 6px; border: 2px solid #3a4350; box-sizing: border-box"></span><span style="flex-grow: 1; font-size: 14px">Endpoint /health</span><span style="font-size: 11px; font-weight: 800; color: #c9b8ff; background: #241d3a; padding: 3px 8px; border-radius: 7px; display: flex; gap: 4px; align-items: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7l2 2 3-4M4 16l2 2 3-4M13 7h7M13 16h7"></path></svg>En To Do's</span></div>
+<div style="display: flex; align-items: center; gap: 10px; min-height: 36px"><span style="width: 20px; height: 20px; border-radius: 6px; border: 2px solid #3a4350; box-sizing: border-box"></span><span style="flex-grow: 1; font-size: 14px">Diagrama de arquitectura</span><button type="button" style="height: 28px; padding: 0 8px; border-radius: 8px; border: 1px dashed #3a4350; background: none; color: #8b95a3; font: inherit; font-size: 11px; font-weight: 800; display: flex; gap: 4px; align-items: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>To Do's</button></div>
+</div>
+<div style="display: flex; align-items: center; gap: 10px; background: #14231d; border: 1px solid #2ecc8f33; border-radius: 14px; padding: 6px 12px 6px 4px">
+<div class="peek"><svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true"><path class="steam" d="M24 16c-3-4 3-6 0-11" fill="none" stroke="#c3cad3" stroke-width="2.4" stroke-linecap="round"></path><path class="steam s2" d="M31 16c-3-4 3-6 0-11" fill="none" stroke="#c3cad3" stroke-width="2.4" stroke-linecap="round"></path><path class="steam s3" d="M38 16c-3-4 3-6 0-11" fill="none" stroke="#c3cad3" stroke-width="2.4" stroke-linecap="round"></path><path d="M12 22h36v12a16 16 0 0 1-16 16h-4a16 16 0 0 1-16-16z" fill="#2ecc8f"></path><rect x="10" y="19" width="40" height="5" rx="2.5" fill="#5fe0ad"></rect><path d="M48 27h3a7 7 0 0 1 0 14h-4" fill="none" stroke="#2ecc8f" stroke-width="4.5"></path><g class="blink"><circle cx="24" cy="33" r="2.5" fill="#0e1116"></circle><circle cx="36" cy="33" r="2.5" fill="#0e1116"></circle></g><path d="M27 38.5q3 3 6 0" fill="none" stroke="#0e1116" stroke-width="2" stroke-linecap="round"></path><ellipse cx="19" cy="37.5" rx="2.8" ry="1.7" fill="#ff8fa3" opacity="0.75"></ellipse><ellipse cx="41" cy="37.5" rx="2.8" ry="1.7" fill="#ff8fa3" opacity="0.75"></ellipse></svg></div>
+<p style="margin: 0; font-size: 12px; line-height: 1.4; color: #c3cad3">Escribe <span style="font-family: 'JetBrains Mono', monospace; color: #2ecc8f; background: #183327; padding: 1px 5px; border-radius: 4px">/</span> para insertar código, listas, tablas o enlazar otra nota<span class="caret" style="color: #2ecc8f">|</span></p>
+</div>
+</div>
+<div style="position: absolute; left: 12px; right: 12px; bottom: 24px; height: 52px; background: #1a2029; border: 1px solid #2a323d; border-radius: 16px; display: flex; align-items: center; justify-content: space-around; box-shadow: 0 10px 30px rgba(0,0,0,.4)">
+<button type="button" aria-label="Insertar bloque" style="width: 44px; height: 44px; border: none; border-radius: 12px; background: #183327; color: #2ecc8f; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4L9 20"></path></svg></button>
+<button type="button" aria-label="Texto" style="width: 44px; height: 44px; border: none; background: none; color: #c3cad3; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6V4h14v2M12 4v16M9 20h6"></path></svg></button>
+<button type="button" aria-label="Checklist" style="width: 44px; height: 44px; border: none; background: none; color: #c3cad3; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><path d="M8 12l3 3 5-6"></path></svg></button>
+<button type="button" aria-label="Código" style="width: 44px; height: 44px; border: none; background: none; color: #c3cad3; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"></path></svg></button>
+<button type="button" aria-label="Imagen" style="width: 44px; height: 44px; border: none; background: none; color: #c3cad3; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"></rect><circle cx="9" cy="10" r="2"></circle><path d="M21 16l-5-5-9 9"></path></svg></button>
+<button type="button" aria-label="Enlazar nota" style="width: 44px; height: 44px; border: none; background: none; color: #c3cad3; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg></button>
+<button type="button" aria-label="Nota de voz" style="width: 44px; height: 44px; border: none; background: none; color: #c1abff; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg></button>
+</div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

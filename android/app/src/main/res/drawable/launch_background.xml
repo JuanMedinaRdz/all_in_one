@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Fondo de la ventana mientras arranca el proceso, antes de que Flutter dibuje
+  su primer frame. Va en crema (el mismo fondo del tema claro) para que el
+  arranque funda con el splash animado, sin destello blanco de por medio.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/launch_background" />
+</layer-list>

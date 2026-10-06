@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Igual que drawable/launch_background.xml, pero para API 21+. El color se
+  resuelve por tema (crema en claro, espresso en oscuro) vía values/styles.xml.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?android:colorBackground" />
+</layer-list>

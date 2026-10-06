@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "616243264938",
+    "project_id": "my-personal-app-773f2",
+    "storage_bucket": "my-personal-app-773f2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616243264938:android:a477a6d09b8e51a5a6ffd3",
+        "android_client_info": {
+          "package_name": "com.jncarlos.all_in_one"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf36OhFl9p5LjVPHqkhg0esdrZClAbiS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
